@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const base_page = `<html>
+const basePage = `<html>
 <h1>Hi!</h1>
   <form method="POST" action="">
     <label for="uri">Link:</label>
@@ -12,13 +12,13 @@ const base_page = `<html>
 </html>`
 
 module.exports.handler = (event, context, callback) => {
-    console.log(JSON.stringify(event));
-    callback(
+  console.log(JSON.stringify(event))
+  callback(
         null,
-        {
-            statusCode: 200,
-            body: base_page,
-            headers: {'Content-Type': 'text/html'},
-        }
-    );
+    {
+      statusCode: 200,
+      body: basePage,
+      headers: {'Content-Type': 'text/html'}
+    }
+    )
 }

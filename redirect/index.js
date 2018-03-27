@@ -18,8 +18,8 @@ module.exports.handler = (event, context, callback) => {
   }, (err, data) => {
     console.log(data)
     if (err) {
-      console.log(err);
-      callback(err);
+      console.log(err)
+      return callback(err)
     }
     if (data.Item) {
       callback(
